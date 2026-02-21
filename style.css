@@ -290,7 +290,7 @@ body.dark-mode .navbar {
 
 body.light-mode #home {
   color: #333;
-  background-color: #d5e4fa;
+  background-color: #dce4f5;
 }
 
 body.dark-mode #home {
@@ -562,7 +562,7 @@ body.dark-mode #home .row .col span {
 }
 
 .light-mode #skills {
-  background-color: #d5e4fa;
+  background-color: #e8eef8;
 }
 
 #skills .title h2 {
@@ -585,7 +585,7 @@ body.dark-mode #home .row .col span {
 
 #skills .row {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); 
   gap: 25px; 
   padding: 1rem;
 }
@@ -599,7 +599,7 @@ body.dark-mode #home .row .col span {
   text-align: center;
   padding: 1.5rem 0;
   border-radius: 20px; 
-  width: 90%; 
+  width: 100%; 
   margin: auto;
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
@@ -632,7 +632,7 @@ body.dark-mode #home .row .col span {
 #skills .row .item.differ img {
   width: 100% !important; 
   transform: scale(2.0); 
-  max-width: 80px;      
+  max-width: 98px !important;      
 }
 
 #skills .row .item p {
@@ -778,7 +778,8 @@ body[data-theme='dark'] .logo-dark {
 }
 
 #services .row .item {
-background: linear-gradient(145deg, #05445e, #189ab4);  padding: 40px 25px;
+  background: linear-gradient(145deg, #05445e, #189ab4); 
+  padding: 40px 25px;
   width: 350px;
   border-radius: 20px;
   color: white;
