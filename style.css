@@ -1412,6 +1412,39 @@ footer{
 
 }
 
+@media (max-width: 768px) {
+    #home {
+        height: auto; 
+        min-height: 100vh; 
+        padding: 8rem 2rem 4rem; 
+        padding-left: 0;
+        padding-right: 0;
+        flex-direction: column; 
+    }
+
+    #home .row {
+        flex-direction: column;
+        gap: 50px;
+        padding-top:4rem ;
+    }
+
+    #home .row .col {
+        width: 100%;
+    }
+#home .row img {
+    width: 100%; 
+    max-width: 400px; 
+    
+    height: auto; 
+    margin: 3rem auto;
+    
+    min-width: 300px; 
+    
+    object-fit: cover; 
+    margin-bottom: 0;
+}
+}
+
 @media (max-width:500px){
   .logo {
   height: 100px;
