@@ -734,7 +734,7 @@ body[data-theme='dark'] .logo-dark {
 /* Servieses Start */
 #services {
   padding: 6rem 0;
-  background-color: #fcfcfc; /* خلفية فاتحة جداً تبرز الكروت */
+  background-color: #fcfcfc; 
 }
 
 #services .title {
@@ -749,7 +749,7 @@ body[data-theme='dark'] .logo-dark {
   justify-content: center;
   align-items: center;
   font-size: 38px;
-  font-weight: 800; /* تقلت الخط شوية لشكل أفخم */
+  font-weight: 800;
   letter-spacing: 1px;
   color: #005f99;
   margin-bottom: 5px;
@@ -1039,93 +1039,121 @@ body.dark-mode #portfolio .row .item .details a {
 
 
 /* Contact Start */
-
-#contact{
-  padding: 6rem 0;
-  background-color:#00f4ab17;
-}
-#contact  .title{
-  text-align: center;
-  font-size: 38px;
+/* Contact Start */
+#contact {
+    padding: 6rem 0;
+    background-color: #f0f7ff; /* لون سماوي هادي جداً */
+    transition: all 0.4s ease;
 }
 
-#contact  .title i{
-  cursor: pointer;
+/* الدارك مود للخلفية */
+body.dark-mode #contact {
+    background-color: #0b132b;
 }
 
-#contact  .title h2{
-  color: #0077b6;
+#contact .title {
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
-#contact  .title span{
-  color: #00b4d8;
+#contact .title h2 {
+    font-size: 38px;
+    color: #01356d;
 }
 
+body.dark-mode #contact .title h2 {
+    color: #ffffff;
+}
 
+#contact .title span {
+    color: #00b4d8;
+}
 
-#contact .row{
+#contact .row {
     margin-top: 4rem;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* عشان يشتغل موبايل صح */
+    gap: 3rem;
     background: white;
-    box-shadow: 3px 3px 20px rgba(0,0 , 0, 0.2);
-    padding: 2rem 3rem;
-    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 3rem;
+    border-radius: 15px;
+    align-items: center;
 }
 
+/* الدارك مود للكارت الرئيسي */
+body.dark-mode #contact .row {
+    background: #1c2541;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
 
+/* التنسيق بتاع الـ Inputs */
 #contact .row input,
-#contact .row textarea{
+#contact .row textarea {
     display: block;
     width: 100%;
-    margin: 20px 0;
-    padding: 14px;
+    margin: 15px 0;
+    padding: 15px;
     outline: none;
-    background-color:rgba(75, 149, 122, 0.184) ;
-    border: 1px solid #bbb;
-    border-radius: 7px;
-    font-size: 15px;
-    font-weight: 600;
+    background-color: #f8f9fa;
+    border: 3px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    color: #333;
+}
+
+body.dark-mode #contact .row input,
+body.dark-mode #contact .row textarea {
+    background-color: #0b132b;
+    border-color: #3a506b;
+    color: #ffffff;
 }
 
 #contact .row input:focus,
-#contact .row textarea:focus{
-    font-size: 17px;
-    color: #005f99;
-
+#contact .row textarea:focus {
+    border-color: #0077b6;
+    background-color: #ffffff;
+    box-shadow: 0 0 8px rgba(0, 119, 182, 0.2);
 }
 
+body.dark-mode #contact .row input:focus,
+body.dark-mode #contact .row textarea:focus {
+    background-color: #1c2541;
+    border-color: #00e1ff;
+}
 
-
-#contact .row img{
+#contact .row img {
     width: 100%;
-    height: auto;
-    aspect-ratio:  3/2;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.4s ease;
 }
 
-#contact .row img:hover{
-  transform: scale(1.05);
+#contact .row img:hover {
+    transform: scale(1.02);
 }
 
-.btn{
-    background-color:#0077b6;
+.btn {
+    background: linear-gradient(45deg, #0077b6, #00b4d8);
     color: white;
-    padding: 15px 20px;
+    padding: 16px 20px;
     font-size: 18px;
     font-weight: 600;
     border: none;
     cursor: pointer;
     width: 100%;
-    border-radius: 10px;
-    transition: all ease 0.3s;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
 }
 
-.btn:hover{
-  background-color: #0088cc;
+.btn:hover {
+    background: linear-gradient(45deg, #005f99, #0077b6);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 119, 182, 0.3);
 }
 
 
@@ -1241,6 +1269,8 @@ footer{
 }
 
 
+
+
 @media (max-width:1000px){
    #home .row{
     grid-template-columns: 1fr;
@@ -1259,7 +1289,7 @@ footer{
 
 
    #about{
-    margin-top: 5rem;
+    margin-top: 10rem;
     background-color:white;
     padding: 6rem 0;
    }
